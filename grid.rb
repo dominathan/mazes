@@ -1,11 +1,11 @@
-require 'cell'
+require_relative 'cell.rb'
 
 class Grid
   attr_reader :rows, :columns
 
   def initialize(rows,columns)
     @rows = rows
-    @column = columns
+    @columns = columns
     @grid = prepare_grid
     configure_cells
   end

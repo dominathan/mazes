@@ -1,5 +1,5 @@
 class Cell
-  attr_reader :row, :columnn
+  attr_reader :row, :column
   attr_writer :north, :east, :south, :west
 
   def initialize(row,column)
