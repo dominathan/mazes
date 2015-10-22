@@ -1,6 +1,6 @@
 class Cell
   attr_reader :row, :column
-  attr_writer :north, :east, :south, :west
+  attr_accessor :north, :east, :south, :west
 
   def initialize(row,column)
     @row, @column = row, column
@@ -8,7 +8,7 @@ class Cell
   end
 
   def link(cell, bidi=true)
-    @link[cell] = true
+    @links[cell] = true
     cell.link(self, false) if bidi
     self
   end
